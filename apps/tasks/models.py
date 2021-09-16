@@ -5,7 +5,7 @@ User = get_user_model()
 
 class Task(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='tasks', null=True)
-    body = models.TextField()
+    text = models.TextField()
     is_finished = models.BooleanField(default=False)
-    estimated_finish_time = models.DateTimeField(auto_now=True)
+    estimated_finish_time = models.DateTimeField()
 
