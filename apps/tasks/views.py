@@ -76,6 +76,3 @@ class SetFinishedTaskAPIView(APIView):
         task.save()
         serializer = TaskSerializer(instance=task)
         return Response(serializer.data)
-
-
-
